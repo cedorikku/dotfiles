@@ -15,7 +15,6 @@
 	decorate = short
 	date = format:%a, %Y-%m-%d %R (%z)
 	follow = true
-	graphColors = 1,2,3,4,5,6,8,166,9,10,11,12,13,14,15,208
 	showRoot = true
 	mailmap = true
 [alias]
@@ -28,3 +27,6 @@
 	# commit
 	c = commit
 	ca = commit --amend
+
+	# log
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset %Cgreen(%cr)' --abbrev-commit
