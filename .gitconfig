@@ -1,0 +1,30 @@
+[user]
+	name = Cedric
+	email = 75742716+cedorikku@users.noreply.github.com
+[color]
+	ui = auto
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
+	autocrlf = false
+[log]
+	abbrevCommit = true
+	decorate = short
+	date = format:%a, %Y-%m-%d %R (%z)
+	follow = true
+	graphColors = 1,2,3,4,5,6,8,166,9,10,11,12,13,14,15,208
+	showRoot = true
+	mailmap = true
+[alias]
+	# status
+	s = status
+
+	# add
+	a = add
+
+	# commit
+	c = commit
+	ca = commit --amend
