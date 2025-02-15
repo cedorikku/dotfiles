@@ -1,2 +1,3 @@
 # dotfiles
-ricing my first awesomewm
+
+Config files that I can use for all my personal systems
