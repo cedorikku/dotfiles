@@ -1,0 +1,37 @@
+# Material Palenight Inspired Alacritty Colors
+
+[colors.primary]
+background = "#0f111a"  # editor.bg
+foreground = "#A6ACCD"  # editor.fg
+
+[colors.normal]
+black   = "#000000"  # main.black
+red     = "#F07178"  # main.red
+green   = "#C3E88D"  # main.green
+yellow  = "#FFCB6B"  # main.yellow
+blue    = "#82AAFF"  # main.blue
+magenta = "#C792EA"  # main.purple
+cyan    = "#89DDFF"  # main.cyan
+white   = "#EEFFFF"  # main.white
+
+[colors.bright]
+black   = "#515772"  # editor.disabled
+red     = "#DC6068"  # main.darkred
+green   = "#ABCF76"  # main.darkgreen
+yellow  = "#E6B455"  # main.darkyellow
+blue    = "#6E98EB"  # main.darkblue
+magenta = "#B480D6"  # main.darkpurple
+cyan    = "#71C6E7"  # main.darkcyan
+white   = "#B0C9FF"  # main.paleblue
+
+[colors.selection]
+background = "#444267"  # editor.selection
+foreground = "#EEFFFF"  # editor.title (same as main.white)
+
+[[colors.indexed_colors]]
+index = 16
+color = "#F78C6C"  # main.orange
+
+[[colors.indexed_colors]]
+index = 17
+color = "#FF5370"  # lsp.error or alt red
