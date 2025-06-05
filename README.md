@@ -8,7 +8,7 @@ Using arch btw
 
 ### Git
 
-NOTE: make sure to setup your git first
+NOTE: make sure to setup your .gitconfig first
 
 ```
 pacman -S git
@@ -18,6 +18,14 @@ pacman -S git
 
 ```
 pacman -S stow
+```
+
+### Extras
+
+Some more stuff!
+
+```
+vim nvim yazi eza fzf zoxide fastfetch alacritty
 ```
 
 ## Installation
