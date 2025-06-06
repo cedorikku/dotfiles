@@ -6,3 +6,8 @@ source /usr/share/nvm/init-nvm.sh
 
 # Custom
 [[ -f "$HOME/.config/zsh/custom.zsh" ]] && source "$HOME/.config/zsh/custom.zsh" 
+
+# Load device-specific shell config
+if [[ -f "$HOME/.zsh_device" ]]; then
+    source "$HOME/.zsh_device"
+fi
