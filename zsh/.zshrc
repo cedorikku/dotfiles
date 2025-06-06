@@ -1,21 +1,8 @@
 source /usr/share/cachyos-zsh-config/cachyos-config.zsh
 source /usr/share/nvm/init-nvm.sh
 
-# ENV
-TERM=xterm-256color
-ZSH_THEME="edvardm"
+# Aliases
+[[ -f "$HOME/.config/zsh/aliases.zsh" ]] && source "$HOME/.config/zsh/aliases.zsh"
 
-# personal
-alias tpr="sudo modprobe -r psmouse && sudo modprobe psmouse"
-
-# common
-alias shutdown='sudo shutdown now'
-alias restart='sudo reboot'
-alias suspend='sudo pm-suspend'
-alias sleep='pmset sleepnow'
-alias c="clear"
-
-alias ls="eza --icons"
-
-eval "$(oh-my-posh init zsh --config ~/tokyonight_storm.omp.json)"
-eval "$(zoxide init --cmd cd zsh)"
+# Custom
+[[ -f "$HOME/.config/zsh/custom.zsh" ]] && source "$HOME/.config/zsh/custom.zsh" 
