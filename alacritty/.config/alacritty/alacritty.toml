@@ -50,7 +50,7 @@ draw_bold_text_with_bright_colors = true
 #white = "0xECEFF4"
 
 [font]
-size = 16
+size = 14
 
 [font.normal]
 family = "monospace"
