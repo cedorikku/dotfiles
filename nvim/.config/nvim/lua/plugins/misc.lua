@@ -20,6 +20,9 @@ return {
     -- Hints keybinds
     'folke/which-key.nvim',
   },
+  { -- Vim sessions
+    'tpope/vim-obsession',
+  },
   {
     -- Autoclose parentheses, brackets, quotes, etc.
     'windwp/nvim-autopairs',
