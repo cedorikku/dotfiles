@@ -46,6 +46,13 @@ return {
               vim.lsp.buf.format { async = false }
             end,
           })
+
+          -- Set personal formatting keymap
+          vim.bo[bufnr].formatexpr = 'v:lua.vim.lsp.formatexpr()'
+          vim.keymap.set('n', '<leader>p', '<cmd>lua vim.lsp.buf.format({ async = false })<CR>',
+            { noremap = true, silent = true })
+        else
+          vim.bo[bufnr].formatexpr = nil
         end
       end,
     }
