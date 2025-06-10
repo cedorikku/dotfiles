@@ -60,7 +60,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
         find_files = {
           flie_ignore_patterns = { 'node_modules', '.git' },
           hidden = true,
-          no_ignore = true,
         },
       },
       live_grep = {
