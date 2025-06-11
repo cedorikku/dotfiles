@@ -37,4 +37,5 @@ require('lazy').setup {
   require 'plugins.indent-blankline',
   require 'plugins.fold',
   require 'plugins.misc',
+  require 'plugins.auto-session',
 }
