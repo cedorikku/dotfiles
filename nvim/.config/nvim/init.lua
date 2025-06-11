@@ -38,4 +38,5 @@ require('lazy').setup {
   require 'plugins.fold',
   require 'plugins.misc',
   require 'plugins.auto-session',
+  require 'plugins.comment',
 }
