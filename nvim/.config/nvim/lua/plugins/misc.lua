@@ -31,8 +31,8 @@ return {
     -- Autoclose usual markup language tags (html, xml, etc)
     'windwp/nvim-ts-autotag',
     opts = {
-      enable_close = true, -- Auto close tags
-      enable_rename = true, -- Auto rename pairs of tags
+      enable_close = true,           -- Auto close tags
+      enable_rename = true,          -- Auto rename pairs of tags
       enable_close_on_slash = false, -- Auto close on trailing </
     },
     per_filetype = {
@@ -64,6 +64,15 @@ return {
     },
     config = function()
       require('neoclip').setup()
+    end,
+  },
+  {
+    -- Easily surround text
+    'kylechui/nvim-surround',
+    version = '^3.0.0', -- Use for stability; omit to use `main` branch for the latest features
+    event = 'VeryLazy',
+    config = function()
+      require('nvim-surround').setup {}
     end,
   },
 }
