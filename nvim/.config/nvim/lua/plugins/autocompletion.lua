@@ -35,13 +35,6 @@ return { -- Autocompletion
   --- @type blink.cmp.Config
   opts = {
     keymap = {
-      --  <C-y> to accept ([y]es) the completion.
-      --    This will auto-import if your LSP supports it.
-      --    This will expand snippets if the LSP sent a snippet.
-      -- 'super-tab' for tab to accept
-      -- 'enter' for enter to accept
-      -- 'none' for no mappings
-      --
       -- read `:help ins-completion` why default is recommended
       --
       -- All presets have the following mappings:
@@ -53,6 +46,16 @@ return { -- Autocompletion
       --
       -- See :h blink-cmp-config-keymap for defining your own keymap
       preset = 'default',
+      ['<C-j>'] = {
+        function(cmp)
+          cmp.select_next()
+        end,
+      },
+      ['<C-k>'] = {
+        function(cmp)
+          cmp.select_prev()
+        end,
+      },
 
       -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
       --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
@@ -70,8 +73,8 @@ return { -- Autocompletion
       menu = {
         draw = {
           columns = {
-            { 'label', 'label_description', gap = 1 },
-            { 'kind_icon', gap = 1, 'kind' },
+            { 'label',     'label_description', gap = 1 },
+            { 'kind_icon', gap = 1,             'kind' },
           },
         },
       },
