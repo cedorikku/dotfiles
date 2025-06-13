@@ -1,6 +1,10 @@
 -- Standalone plugins with less than 10 lines of config go here
 return {
   {
+    -- Useful line commenting
+    'numToStr/Comment.nvim',
+  },
+  {
     -- Tmux & split window navigation
     'christoomey/vim-tmux-navigator',
   },
@@ -31,8 +35,8 @@ return {
     -- Autoclose usual markup language tags (html, xml, etc)
     'windwp/nvim-ts-autotag',
     opts = {
-      enable_close = true,           -- Auto close tags
-      enable_rename = true,          -- Auto rename pairs of tags
+      enable_close = true, -- Auto close tags
+      enable_rename = true, -- Auto rename pairs of tags
       enable_close_on_slash = false, -- Auto close on trailing </
     },
     per_filetype = {
@@ -63,7 +67,11 @@ return {
       -- {'ibhagwan/fzf-lua'},
     },
     config = function()
-      require('neoclip').setup()
+      require('neoclip').setup {
+        keys = {
+          telescope = {},
+        },
+      }
     end,
   },
   {
