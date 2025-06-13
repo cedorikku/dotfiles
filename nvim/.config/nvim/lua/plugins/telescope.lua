@@ -92,6 +92,9 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
     vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
+    -- My shortcuts
+    vim.keymap.set('n', '<leader>sc', '<cmd>Telescope neoclip<cr>', { desc = '[S]earch through [C]lipboard manager' })
+
     -- Slightly advanced example of overriding default behavior and theme
     vim.keymap.set('n', '<leader>/', function()
       -- You can pass additional configuration to Telescope to change the theme, layout, etc.
@@ -114,8 +117,5 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set('n', '<leader>sn', function()
       builtin.find_files { cwd = vim.fn.stdpath 'config' }
     end, { desc = '[S]earch [N]eovim files' })
-
-    -- My shortcuts
-    vim.keymap.set('n', '<leader>sc', '<cmd>Telescope neoclip<cr>', { desc = '[C]libpard manager' })
   end,
 }
