@@ -60,21 +60,6 @@ return {
     end,
   },
   {
-    -- Clipboard manager
-    'AckslD/nvim-neoclip.lua',
-    dependencies = {
-      { 'nvim-telescope/telescope.nvim' },
-      -- {'ibhagwan/fzf-lua'},
-    },
-    config = function()
-      require('neoclip').setup {
-        keys = {
-          telescope = {},
-        },
-      }
-    end,
-  },
-  {
     -- Easily surround text
     'kylechui/nvim-surround',
     version = '^3.0.0', -- Use for stability; omit to use `main` branch for the latest features
