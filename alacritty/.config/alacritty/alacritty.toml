@@ -50,11 +50,11 @@ draw_bold_text_with_bright_colors = true
 #white = "0xECEFF4"
 
 [font]
-size = 14
+size = 13
 
 [font.normal]
 family = "FiraCode Nerd Font"
-style = "Semibold"
+style = "Medium"
 
 [font.bold]
 family = "FiraCode Nerd Font"
