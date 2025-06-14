@@ -38,8 +38,14 @@ $ git clone git@github.com:cedorikku/dotfiles.git
 $ cd dotfiles
 ```
 
-then use GNU stwo to create symlinks
+then use GNU stow to create symlinks
 
 ```
-$ stow .
+$ stow <config-name>
+```
+
+e.g. if you need nvim
+
+```
+$ stow nvim
 ```
