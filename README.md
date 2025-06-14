@@ -25,7 +25,7 @@ pacman -S stow
 Some more stuff!
 
 ```
-vim nvim yazi eza fzf zoxide fastfetch alacritty
+vim nvim yazi eza fzf zoxide fastfetch alacritty ttf-firacode-nerd
 ```
 
 ## Installation

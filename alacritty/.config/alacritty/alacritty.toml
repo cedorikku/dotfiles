@@ -53,20 +53,20 @@ draw_bold_text_with_bright_colors = true
 size = 14
 
 [font.normal]
-family = "monospace"
-style = "Medium"
+family = "FiraCode Nerd Font"
+style = "Semibold"
 
 [font.bold]
-family = "monospace"
+family = "FiraCode Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "monospace"
-style = "Italic"
+family = "FiraCode Nerd Font"
+style = "Medium"
 
 [font.bold_italic]
-family = "monospace"
-style = "Bold Italic"
+family = "FiraCode Nerd Font"
+style = "Bold"
 
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
