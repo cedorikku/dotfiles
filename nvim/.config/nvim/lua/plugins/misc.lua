@@ -35,8 +35,8 @@ return {
     -- Autoclose usual markup language tags (html, xml, etc)
     'windwp/nvim-ts-autotag',
     opts = {
-      enable_close = true,           -- Auto close tags
-      enable_rename = true,          -- Auto rename pairs of tags
+      enable_close = true, -- Auto close tags
+      enable_rename = true, -- Auto rename pairs of tags
       enable_close_on_slash = false, -- Auto close on trailing </
     },
     per_filetype = {
@@ -67,12 +67,5 @@ return {
     config = function()
       require('nvim-surround').setup {}
     end,
-  },
-  {
-    -- Smooth scrolling, opinionated
-    'karb94/neoscroll.nvim',
-    opts = {
-      duration_multiplier = 0.125
-    },
   },
 }
