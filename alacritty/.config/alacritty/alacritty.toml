@@ -50,7 +50,7 @@ draw_bold_text_with_bright_colors = true
 #white = "0xECEFF4"
 
 [font]
-size = 13
+size = 14
 
 [font.normal]
 family = "FiraCode Nerd Font"
@@ -58,15 +58,15 @@ style = "Medium"
 
 [font.bold]
 family = "FiraCode Nerd Font"
-style = "Bold"
+style = "Semibold"
 
 [font.italic]
 family = "FiraCode Nerd Font"
-style = "Medium"
+style = "Italic"
 
 [font.bold_italic]
 family = "FiraCode Nerd Font"
-style = "Bold"
+style = "Bold Italic"
 
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
