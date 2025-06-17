@@ -24,7 +24,7 @@ return {
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
       -- Useful status updates for LSP.
-      { 'j-hui/fidget.nvim', opts = {} },
+      { 'j-hui/fidget.nvim',    opts = {} },
 
       -- Allows extra capabilities provided by blink.cmp
       'saghen/blink.cmp',
@@ -120,6 +120,16 @@ return {
             else
               return client.supports_method(method, { bufnr = bufnr })
             end
+          end
+
+          local hover = vim.lsp.buf.hover
+          ---@diagnostic disable-next-line: duplicate-set-field
+          vim.lsp.buf.hover = function()
+            return hover {
+              max_width = 100,
+              max_height = 14,
+              border = 'single',
+            }
           end
 
           -- The following two autocommands are used to highlight references of the
