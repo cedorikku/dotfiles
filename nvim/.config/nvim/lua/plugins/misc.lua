@@ -3,6 +3,7 @@ return {
   {
     -- Useful line commenting
     'numToStr/Comment.nvim',
+    opts = {},
   },
   {
     -- Tmux & split window navigation
@@ -35,8 +36,8 @@ return {
     -- Autoclose usual markup language tags (html, xml, etc)
     'windwp/nvim-ts-autotag',
     opts = {
-      enable_close = true, -- Auto close tags
-      enable_rename = true, -- Auto rename pairs of tags
+      enable_close = true,           -- Auto close tags
+      enable_rename = true,          -- Auto rename pairs of tags
       enable_close_on_slash = false, -- Auto close on trailing </
     },
     per_filetype = {
