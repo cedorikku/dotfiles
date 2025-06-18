@@ -94,6 +94,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
 
     -- My shortcuts
     vim.keymap.set('n', '<leader>sc', '<cmd>reg<cr>', { desc = '[S]earch through [C]lipboard buffer' })
+    vim.keymap.set('n', '<leader>st', '<cmd>TodoTelescope<cr>', { desc = '[S]earch [T]odos' })
 
     -- Slightly advanced example of overriding default behavior and theme
     vim.keymap.set('n', '<leader>/', function()
