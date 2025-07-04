@@ -18,15 +18,5 @@
 	showRoot = true
 	mailmap = true
 [alias]
-	# status
-	s = status
-
-	# add
-	a = add
-
-	# commit
-	c = commit
-	ca = commit --amend
-
 	# log
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset %Cgreen(%cr)' --abbrev-commit
+	log = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset %Cgreen(%cr)' --abbrev-commit
