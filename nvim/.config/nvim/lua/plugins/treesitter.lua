@@ -1,36 +1,33 @@
-local my_languages = {
-  'html',
-  'javascript',
-  'css',
-  'typescript',
-  'tsx',
-  'json',
-  'toml',
-  'bash',
-  'c',
-  'diff',
-  'lua',
-  'luadoc',
-  'markdown',
-  'markdown_inline',
-  'vim',
-  'vimdoc',
-}
-
 return { -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
   build = ':TSUpdate',
   main = 'nvim-treesitter.configs', -- Sets main module to use for opts
-  -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
   opts = {
-    ensure_installed = my_languages,
-    -- Autoinstall languages that are not installed
-    auto_install = true,
-    highlight = {
-      enable = true,
+    ensure_installed = {
+      'html',
+      'javascript',
+      'css',
+      'typescript',
+      'tsx',
+      'json',
+      'toml',
+      'bash',
+      'c',
+      'diff',
+      'lua',
+      'luadoc',
+      'markdown',
+      'markdown_inline',
+      'vim',
+      'vimdoc',
     },
+    auto_install = true,
+    highlight = { enable = true },
     indent = { enable = true },
   },
+
+  -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+  --
   -- There are additional nvim-treesitter modules that you can use to interact
   -- with nvim-treesitter. You should go explore a few and see what interests you:
   --
