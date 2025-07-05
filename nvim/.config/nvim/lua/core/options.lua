@@ -26,7 +26,6 @@ vim.opt.termguicolors = true                         -- Set termguicolors to ena
 vim.o.whichwrap = 'bs<>[]hl'                         -- Which "horizontal" keys are allowed to travel to prev/next line (default: 'b,s')
 vim.o.numberwidth = 4                                -- Set number column width to 2 (default: 4)
 vim.o.swapfile = false                               -- Creates a swapfile (default: true)
-vim.o.showtabline = 2                                -- Always show tabs (default: 1)
 vim.o.backspace = 'indent,eol,start'                 -- Allow backspace on (default: 'indent,eol,start')
 vim.o.pumheight = 10                                 -- Pop up menu height (default: 0)
 vim.o.conceallevel = 0                               -- So that `` is visible in markdown files (default: 1)
