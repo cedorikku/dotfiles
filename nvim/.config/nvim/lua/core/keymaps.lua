@@ -47,3 +47,7 @@ vim.keymap.set('v', 'p', '"_dP', opts)
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+-- Quickfix
+vim.keymap.set('n', '<M-n>', '<cmd>cnext<CR>', opts);
+vim.keymap.set('n', '<M-p>', '<cmd>cprev<CR>', opts);
