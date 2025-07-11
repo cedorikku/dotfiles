@@ -15,7 +15,5 @@ return {
         lsp_stop_on_restore = true,
         suppressed_dirs = { '~/', '~/Downloads','~/Desktop', '~/Documents', '/' },
         -- log_level = 'debug',
-        pre_save_cmds = {"tabdo Neotree close"},
-        post_restore_cmds = {"Neotree"}
     },
 }

@@ -24,7 +24,6 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup {
   require 'plugins.lsp',
-  require 'plugins.neo-tree',
   require 'plugins.lualine',
   require 'plugins.colortheme',
   require 'plugins.treesitter',
@@ -37,4 +36,5 @@ require('lazy').setup {
   require 'plugins.fold',
   require 'plugins.misc',
   require 'plugins.auto-session',
+  require 'plugins.oil',
 }
