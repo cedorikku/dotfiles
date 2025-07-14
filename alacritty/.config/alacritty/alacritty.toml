@@ -8,6 +8,7 @@ decorations = "full"
 title = "alacritty"
 opacity = 1
 decorations_theme_variant = "Dark"
+startup_mode = "Fullscreen"
 
 [window.dimensions]
 columns = 120
