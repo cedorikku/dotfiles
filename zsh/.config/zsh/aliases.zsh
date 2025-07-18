@@ -8,5 +8,3 @@ alias cleanch="sudo pacman -Scc" # So that I don't forget this exists
 # common
 alias shutdown='sudo shutdown now'
 alias restart='sudo reboot'
-
-alias ls="eza --icons"
