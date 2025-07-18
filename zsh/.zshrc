@@ -26,7 +26,7 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # TODO: add more plugins that I use
-[[ -z "${plugins[*]}" ]] && plugins=(git fzf extract)
+plugins=(git fzf extract nvm npm eza)
 
 source $ZSH/oh-my-zsh.sh
 
