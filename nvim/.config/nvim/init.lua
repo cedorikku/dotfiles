@@ -14,14 +14,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
--- [[ Configure and install plugins ]]
---
---  To check the current status of your plugins, run
---    :Lazy
---
---  You can press `?` in this menu for help.
---
--- NOTE: Here is where you install your plugins.
+
 require('lazy').setup {
   require 'plugins.lsp',
   require 'plugins.lualine',
