@@ -4,11 +4,9 @@ Finally started to put my config files in a repo
 
 ## Requirements
 
-Using arch btw
+An example using arch (_arch btw_)
 
 ### Git
-
-NOTE: make sure to setup your .gitconfig first
 
 ```
 pacman -S git
@@ -20,22 +18,30 @@ pacman -S git
 pacman -S stow
 ```
 
-### Extras
+### Essentials
 
-Some more stuff!
+Important stuff, like nerd font
 
 ```
-vim nvim yazi eza fzf zoxide fastfetch alacritty ttf-firacode-nerd
+pacman -S vim nvim eza zoxide fzf fd ripgrep ttf-firacode-nerd
 ```
 
 ## Installation
+
+> [!NOTE]: Make sure to setup your .gitconfig first
 
 First, clone the repo in your $HOME directory using git
 
 ```
 $ cd $HOME
-$ git clone git@github.com:cedorikku/dotfiles.git
+$ git clone https://github.com/cedorikku/dotfiles.git
 $ cd dotfiles
+```
+
+or via ssh
+
+```bash
+git@github.com:cedorikku/dotfiles.git
 ```
 
 then use GNU stow to create symlinks
