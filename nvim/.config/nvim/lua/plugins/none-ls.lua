@@ -9,19 +9,19 @@ return {
   },
   config = function()
     local null_ls = require 'null-ls'
-    local formatting = null_ls.builtins.formatting -- to setup formatters
+    local formatting = null_ls.builtins.formatting   -- to setup formatters
     local diagnostics = null_ls.builtins.diagnostics -- to setup linters
 
     -- Formatters & linters for mason to install
     require('mason-null-ls').setup {
       ensure_installed = {
-        'prettier', -- ts/js formatter
-        'stylua', -- lua formatter
-        'eslint_d', -- ts/js linter
-        'shfmt', -- Shell formatter
+        'prettier',  -- ts/js formatter
+        'stylua',    -- lua formatter
+        'eslint_d',  -- ts/js linter
+        'shfmt',     -- Shell formatter
         'checkmake', -- linter for Makefiles
-        'roslyn', -- csharp lsp
-        'rzls', -- razor files
+        'roslyn',    -- csharp lsp
+        'rzls',      -- razor files
         'csharpier', -- csharp formatter
       },
       automatic_installation = true,
@@ -43,7 +43,8 @@ return {
         if client.supports_method 'textDocument/formatting' then
           -- Set personal formatting keymap
           vim.bo[bufnr].formatexpr = 'v:lua.vim.lsp.formatexpr()'
-          vim.keymap.set('n', '<leader>p', '<cmd>lua vim.lsp.buf.format({ async = false })<CR>', { noremap = true, silent = true, desc = 'Format with lsp' })
+          vim.keymap.set('n', '<leader>p', '<cmd>lua vim.lsp.buf.format({ async = false })<CR>',
+            { noremap = true, silent = true, desc = 'Format with lsp' })
         end
       end,
     }
