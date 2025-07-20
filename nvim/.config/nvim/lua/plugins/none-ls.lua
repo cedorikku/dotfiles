@@ -20,6 +20,9 @@ return {
         'eslint_d', -- ts/js linter
         'shfmt', -- Shell formatter
         'checkmake', -- linter for Makefiles
+        'roslyn', -- csharp lsp
+        'rzls', -- razor files
+        'csharpier', -- csharp formatter
       },
       automatic_installation = true,
     }
@@ -29,6 +32,7 @@ return {
       formatting.prettier.with { filetypes = { 'html', 'css', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'json', 'yaml', 'markdown' } },
       formatting.stylua,
       formatting.shfmt.with { args = { '-i', '4' } },
+      formatting.csharpier,
     }
 
     null_ls.setup {

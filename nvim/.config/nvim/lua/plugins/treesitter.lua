@@ -21,6 +21,7 @@ return {
       'markdown_inline',
       'vim',
       'vimdoc',
+      'c_sharp',
     },
     auto_install = true,
     highlight = { enable = true },
