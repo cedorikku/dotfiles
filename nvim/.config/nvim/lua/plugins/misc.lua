@@ -7,7 +7,8 @@ return {
   },
   {
     -- Tmux & split window navigation
-    'christoomey/vim-tmux-navigator',
+    'aserowy/tmux.nvim',
+    opts = {},
   },
   {
     -- Detect tabstop and shiftwidth automatically
