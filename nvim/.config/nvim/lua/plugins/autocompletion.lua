@@ -72,8 +72,8 @@ return { -- Autocompletion
         winhighlight = 'Normal:BlinkCmpMenu,FloatBorder:BlinkCmpMenuBorder,CursorLine:BlinkCmpMenuSelection,Search:None',
         draw = {
           columns = {
-            { 'label',     'label_description', gap = 1 },
-            { 'kind_icon', gap = 1,             'kind' },
+            { 'label', 'label_description', gap = 1 },
+            { 'kind_icon', gap = 1, 'kind' },
           },
         },
       },
@@ -98,6 +98,12 @@ return { -- Autocompletion
     fuzzy = { implementation = 'lua' },
 
     -- Shows a signature help window while you type arguments for a function
-    signature = { enabled = true },
+    signature = {
+      enabled = true,
+      window = {
+        border = 'rounded',
+        winhighlight = 'Normal:BlinkCmpSignatureHelp,FloatBorder:BlinkCmpSignatureBorder,CursorLine:BlinkCmpDocCursorLine',
+      },
+    },
   },
 }
