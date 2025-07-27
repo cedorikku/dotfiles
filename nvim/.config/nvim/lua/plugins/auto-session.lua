@@ -14,6 +14,5 @@ return {
         enabled = true,
         lsp_stop_on_restore = true,
         suppressed_dirs = { '~/', '~/Downloads','~/Desktop', '~/Documents', '/' },
-        -- log_level = 'debug',
     },
 }
