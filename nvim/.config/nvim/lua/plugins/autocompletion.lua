@@ -58,22 +58,15 @@ return { -- Autocompletion
 
     completion = {
       -- By default, you may press `<c-space>` to show the documentation.
-      -- Optionally, set `auto_show = true` to show the documentation after a delay.
       documentation = {
         auto_show = true,
         auto_show_delay_ms = 300,
-        window = {
-          border = 'rounded',
-          winhighlight = 'Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,CursorLine:BlinkCmpDocCursorLine,Search:None',
-        },
       },
       menu = {
-        border = 'rounded',
-        winhighlight = 'Normal:BlinkCmpMenu,FloatBorder:BlinkCmpMenuBorder,CursorLine:BlinkCmpMenuSelection,Search:None',
         draw = {
           columns = {
-            { 'label', 'label_description', gap = 1 },
-            { 'kind_icon', gap = 1, 'kind' },
+            { 'label',     'label_description', gap = 1 },
+            { 'kind_icon', gap = 1,             'kind' },
           },
         },
       },
@@ -98,12 +91,6 @@ return { -- Autocompletion
     fuzzy = { implementation = 'lua' },
 
     -- Shows a signature help window while you type arguments for a function
-    signature = {
-      enabled = true,
-      window = {
-        border = 'rounded',
-        winhighlight = 'Normal:BlinkCmpSignatureHelp,FloatBorder:BlinkCmpSignatureBorder,CursorLine:BlinkCmpDocCursorLine',
-      },
-    },
+    signature = { enabled = true },
   },
 }

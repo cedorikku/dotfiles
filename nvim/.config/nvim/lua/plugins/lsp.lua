@@ -110,7 +110,6 @@ return {
             return hover {
               max_width = 100,
               max_height = 14,
-              border = 'single',
             }
           end
 
