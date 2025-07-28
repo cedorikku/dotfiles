@@ -8,7 +8,11 @@ return {
   {
     -- Tmux & split window navigation
     'aserowy/tmux.nvim',
-    opts = {},
+    opts = {
+      copy_sync = {
+        enable = false,
+      },
+    },
   },
   {
     -- Detect tabstop and shiftwidth automatically
