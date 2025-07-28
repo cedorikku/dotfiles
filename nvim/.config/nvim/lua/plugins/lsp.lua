@@ -237,10 +237,6 @@ return {
             },
           },
         },
-
-        omnisharp = {
-          filetypes = { 'cs', 'csproj', 'sln', 'vb' },
-        },
       }
 
       -- Ensure the servers and tools above are installed
