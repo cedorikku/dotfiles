@@ -20,10 +20,10 @@ pacman -S stow
 
 ### Essentials
 
-Important stuff, like nerd font
+Important stuff, like nerd font, to make stuff work nicely especially in neovim
 
 ```
-pacman -S vim nvim eza zoxide fzf fd ripgrep ttf-firacode-nerd
+pacman -S vim nvim eza zoxide fzf fd ripgrep ttf-firacode-nerd trash-cli
 ```
 
 ## Installation
