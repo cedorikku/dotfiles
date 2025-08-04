@@ -5,6 +5,9 @@ vim.g.maplocalleader = ' '
 -- For conciseness
 local opts = { noremap = true, silent = true }
 
+-- Disable the spacebar key's default behavior in Normal and Visual modes
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+
 -- Quit file
 vim.keymap.set('n', '<C-q>', '<cmd> q <CR>', opts)
 
