@@ -2,7 +2,8 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
-config.max_fps = 60
+config.max_fps = 120
+config.animation_fps = 60
 config.window_close_confirmation = 'NeverPrompt'
 config.color_scheme = "Tokyo Night"
 
