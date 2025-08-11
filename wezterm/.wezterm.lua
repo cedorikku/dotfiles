@@ -4,14 +4,13 @@ local config = wezterm.config_builder()
 
 config.max_fps = 120
 config.animation_fps = 60
-config.window_close_confirmation = 'NeverPrompt'
+config.window_close_confirmation = "NeverPrompt"
 config.color_scheme = "Tokyo Night"
 
 config.font_size = 12
-config.font = wezterm.font("Liga SFMono Nerd Font")
 config.font = wezterm.font_with_fallback({
-	"Liga SFMono Nerd Font",
-	"FiraCode Nerd Font",
+	{ family = "Liga SFMono Nerd Font", weight = "Medium" },
+	{ family = "FiraCode Nerd Font",    weight = "Medium" },
 })
 
 config.freetype_load_flags = "NO_HINTING"
@@ -28,7 +27,7 @@ config.keys = {
 	{
 		key = "n",
 		mods = "SHIFT|CTRL",
-        action = wezterm.action.ToggleFullScreen,
+		action = wezterm.action.ToggleFullScreen,
 	},
 }
 
