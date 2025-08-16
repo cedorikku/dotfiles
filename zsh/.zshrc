@@ -44,23 +44,4 @@ export LESS_TERMCAP_me="$(tput sgr0 2> /dev/null)"
 # shells instead of the default "last window closed" history.
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-# Cleanup orphaned packages
-alias cleanup="sudo pacman -Rsn $(pacman -Qtdq)"
-
-# Get the error messages from journalctl
-alias jctl="journalctl -p 3 -xb"
-
-# Recent installed packages
-alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
-
-# Fish-like syntax highlighting and autosuggestions
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# Use history substring search
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-# pkgfile "command not found" handler
-source /usr/share/doc/pkgfile/command-not-found.zsh
-
 export FZF_BASE=/usr/share/fzf
