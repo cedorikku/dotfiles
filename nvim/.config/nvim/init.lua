@@ -29,6 +29,5 @@ require('lazy').setup {
   require 'plugins.misc',
   require 'plugins.auto-session',
   require 'plugins.oil',
-  require 'plugins.markdown',
   require 'plugins.roslyn',
 }
