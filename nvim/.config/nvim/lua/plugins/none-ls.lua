@@ -23,6 +23,7 @@ return {
         'roslyn',    -- csharp lsp
         'rzls',      -- razor files
         'csharpier', -- csharp formatter
+        'prismaFmt', -- prisma orm formatter
       },
       automatic_installation = true,
     }
@@ -33,6 +34,7 @@ return {
       formatting.stylua,
       formatting.shfmt.with { args = { '-i', '4' } },
       formatting.csharpier,
+      formatting.prismaFmt,
     }
 
     null_ls.setup {

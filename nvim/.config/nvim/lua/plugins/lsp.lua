@@ -212,6 +212,9 @@ return {
         dockerls = {},
         jsonls = {},
         yamlls = {},
+        prismals = {
+          filetypes = { 'prisma' },
+        },
 
         emmet_language_server = {
           filetypes = { 'html', 'css', 'jsx', 'tsx', 'javascriptreact', 'typescriptreact' },
