@@ -8,6 +8,9 @@ local opts = { noremap = true, silent = true }
 -- Disable the spacebar key's default behavior in Normal and Visual modes
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
+-- Refresh file
+vim.keymap.set('n', '<C-e>', '<cmd> e <CR>', opts)
+
 -- Quit file
 vim.keymap.set('n', '<C-q>', '<cmd> q <CR>', opts)
 
