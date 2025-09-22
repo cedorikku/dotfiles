@@ -49,7 +49,7 @@ vim.keymap.set('n', '<M-p>', '<cmd>cprev<CR>', opts)
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 -- Select all
-vim.keymap.set('n', '<C-a>', 'ggVG', opts);
+vim.keymap.set('n', '<C-a>', 'ggVG', opts)
 
 -- Copilot autocomplete
 vim.keymap.set('n', '<leader>ae', '<cmd>Copilot enable<CR>', opts)
