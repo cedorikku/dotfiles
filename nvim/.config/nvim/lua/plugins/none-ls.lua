@@ -40,8 +40,10 @@ return {
       -- debug = true, -- Enable debug mode. Inspect logs with :NullLsLog.
       sources = sources,
       -- you can reuse a shared lspconfig on_attach callback here
+      ---@param client vim.lsp.Client
+      ---@param bufnr? integer
       on_attach = function(client, bufnr)
-        if client.supports_method 'textDocument/formatting' then
+        if client:supports_method(vim.lsp.protocol.Methods.textDocument_formatting, bufnr) then
           -- Set personal formatting keymap
           vim.bo[bufnr].formatexpr = 'v:lua.vim.lsp.formatexpr()'
           vim.keymap.set('n', '<leader>p', '<cmd>lua vim.lsp.buf.format({ async = false })<CR>',
