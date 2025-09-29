@@ -60,3 +60,8 @@ end)
 keymap({ 'n', 'v' }, '<C-l>', function()
   vscode.action 'workbench.action.navigateRight'
 end)
+
+-- File Explorer
+keymap('n', '<leader>e', function()
+  vscode.action 'workbench.view.explorer'
+end)
