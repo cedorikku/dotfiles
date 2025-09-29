@@ -71,6 +71,9 @@ end)
 keymap('n', '<leader>sg', function()
   vscode.action 'workbench.action.findInFiles'
 end)
+keymap('n', '<leader>sy', function() 
+  vscode.action 'workbench.action.gotoSymbol'
+end)
 
 -- File Explorer
 keymap('n', '<leader>e', function()
