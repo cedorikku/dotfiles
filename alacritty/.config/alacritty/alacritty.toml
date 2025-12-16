@@ -171,4 +171,4 @@ live_config_reload = true
 working_directory = "None"
 
 # Theme
-import = [ "~/.config/alacritty/tokyo-night.toml" ] # should follow the absolute path
+import = [ "~/.config/alacritty/dark.toml" ] # should follow the absolute path
