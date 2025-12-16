@@ -23,7 +23,7 @@ pacman -S stow
 Important stuff, like nerd font, to make stuff work nicely especially in neovim
 
 ```
-pacman -S vim nvim eza zoxide fzf fd ripgrep ttf-firacode-nerd trash-cli zed
+pacman -S vim nvim eza zoxide fzf fd ripgrep ttf-firacode-nerd trash-cli zed television
 ```
 
 ## Installation
