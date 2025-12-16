@@ -1,0 +1,104 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "black": "#000000",
+    "white": "#FFFFFF",
+    "gray": "#808080",
+    "darkgray": "#505050"
+  },
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "session",
+          "style": "diamond",
+          "template": " {{ .UserName }}@{{ .HostName }} ",
+          "background": "p:white",
+          "foreground": "p:black",
+          "leading_diamond": "",
+          "trailing_diamond": ""
+        },
+        {
+          "type": "path",
+          "style": "diamond",
+          "foreground": "p:white",
+          "background": "p:gray",
+          "leading_diamond": " ",
+          "trailing_diamond": ""
+        },
+        {
+          "type": "git",
+          "style": "diamond",
+          "foreground": "p:white",
+          "background": "p:darkgray",
+          "template": " {{ .HEAD}} ",
+          "leading_diamond": " ",
+          "trailing_diamond": "",
+          "options": {
+            "fetch_status": true
+          }
+        }
+      ]
+    },
+    {
+      "alignment": "right",
+      "overflow": "hide",
+      "segments": [
+        {
+          "type": "node",
+          "style": "plain",
+          "foreground": "p:pistachio-green",
+          "template": "\ue718 {{ .Full }} "
+        },
+        {
+          "type": "php",
+          "style": "plain",
+          "foreground": "p:terminal-blue",
+          "template": "\ue73d {{ .Full }} "
+        },
+        {
+          "type": "python",
+          "style": "plain",
+          "foreground": "p:terminal-yellow",
+          "template": "\uE235 {{ .Full }}"
+        },
+        {
+          "type": "julia",
+          "style": "plain",
+          "foreground": "p:terminal-magenta",
+          "template": "\uE624 {{ .Full }}"
+        },
+        {
+          "type": "ruby",
+          "style": "plain",
+          "foreground": "p:terminal-red",
+          "template": "\uE791 {{ .Full}}"
+        },
+        {
+          "type": "go",
+          "style": "plain",
+          "foreground": "p:light-sky-blue",
+          "template": "\uFCD1 {{ .Full}}"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "p:white",
+          "template": "⭗"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 3
+}
