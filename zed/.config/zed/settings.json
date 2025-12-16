@@ -1,0 +1,32 @@
+{
+  "terminal": {
+    "font_family": "FiraCode Nerd Font Mono"
+  },
+  "agent": {
+    "play_sound_when_agent_done": false,
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini"
+    },
+    "model_parameters": []
+  },
+  "ui_font_family": ".ZedSans",
+  "buffer_font_family": "JetBrains Mono NL",
+  "buffer_font_weight": 450.0,
+  "buffer_line_height": {
+    "custom": 1.42
+  },
+  "icon_theme": "Material Icon Theme",
+  "minimum_contrast_for_highlights": 60.0,
+  "relative_line_numbers": "enabled",
+  "disable_ai": false,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 16.0,
+  "theme": "Carbonfox",
+  "vim_mode": true
+}

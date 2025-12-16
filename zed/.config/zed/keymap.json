@@ -1,0 +1,77 @@
+[
+  // Personal preferences
+  {
+    "bindings": {
+      "ctrl-q": null,
+      "ctrl-w": null,
+      "ctrl-shift-o": "workspace::Open"
+    }
+  },
+  {
+    "context": "(Editor && showing_completions)",
+    "bindings": {
+      "ctrl-y": "editor::ConfirmCompletion"
+    }
+  },
+  // Vim-like navigation
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-q": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space p": "editor::Format",
+      "space v": "pane::SplitRight",
+      // "space s f": "file_finder::Toggle",
+      "space s o": "outline::Toggle",
+      "space e": "workspace::ToggleLeftDock",
+      "space s f": [
+        "task::Spawn",
+        { "task_name": "file_finder", "reveal_target": "center" }
+      ],
+      "space s g": [
+        "task::Spawn",
+        { "task_name": "fulltext_search", "reveal_target": "center" }
+      ],
+      "ctrl-/": "workspace::ToggleBottomDock",
+      "-": ["task::Spawn", { "task_name": "oil", "reveal_target": "center" }]
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-/": "workspace::ToggleBottomDock",
+      "ctrl-n": ["workspace::SendKeystrokes", "down"],
+      "ctrl-p": ["workspace::SendKeystrokes", "up"]
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "((VimControl && !menu) || (!Editor && !Terminal))",
+    "bindings": {
+      "alt-h": "vim::ResizePaneLeft",
+      "alt-l": "vim::ResizePaneRight"
+    }
+  }
+]
