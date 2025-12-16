@@ -1,0 +1,8 @@
+[
+  {
+    "label": "oil",
+    "hide": "always",
+    "command": "exec nvim -u ~/.config/nvim/oil-zed.lua --cmd \"set noswapfile\" $ZED_DIRNAME",
+    "use_new_terminal": true
+  }
+]
