@@ -3,16 +3,22 @@ return {
   config = function()
     local mode = {
       'mode',
+      separator = { right = '' },
       fmt = function(str)
         return ' ' .. str
-        -- return ' ' .. str:sub(1, 1) -- displays only the first character of the mode
       end,
     }
 
     local filename = {
       'filename',
-      file_status = true, -- displays file status (readonly status, modified status)
       path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
+      file_status = true, -- displays file status (readonly status, modified status)
+      symbols = {
+        modified = '[+]',
+        readonly = '[-]',
+        unnamed = '[No Name]',
+        newfile = '[New]',
+      },
     }
 
     local hide_in_width = function()
@@ -33,35 +39,42 @@ return {
     local diff = {
       'diff',
       colored = false,
-      symbols = { added = ' ', modified = ' ', removed = ' ' }, -- changes diff symbols
+      symbols = { added = '+', modified = '~', removed = '-' },
       cond = hide_in_width,
     }
 
     require('lualine').setup {
       options = {
         icons_enabled = true,
-        theme = 'auto', -- Set theme based on environment variable
-        -- Some useful glyphs:
-        -- https://www.nerdfonts.com/cheat-sheet
-        --        
-        section_separators = { left = '', right = '' },
-        component_separators = { left = '|', right = '|' },
-        disabled_filetypes = { 'alpha', 'neo-tree' },
+        theme = 'lackluster',
+        --     --
+        section_separators = { left = '', right = '' },
+        component_separators = { left = '', right = '' },
+        disabled_filetypes = { 'neo-tree', 'TelescopePrompt', 'oil' },
+        globalstatus = false,
         always_divide_middle = true,
       },
       sections = {
         lualine_a = { mode },
         lualine_b = { 'branch' },
         lualine_c = { filename },
-        lualine_x = { diagnostics, diff, { 'encoding', cond = hide_in_width }, { 'filetype', cond = hide_in_width } },
-        lualine_y = { 'location' },
-        lualine_z = { 'progress' },
+        lualine_x = { diagnostics, diff },
+        lualine_y = { { 'encoding', cond = hide_in_width } },
+        lualine_z = { { 'location', separator = { left = ' ' } } },
       },
       inactive_sections = {
         lualine_a = {},
         lualine_b = {},
-        lualine_c = { { 'filename', path = 1 } },
-        lualine_x = { { 'location', padding = 0 } },
+        lualine_c = { { 'filename', path = 2 } },
+        lualine_x = {},
+        lualine_y = {},
+        lualine_z = {},
+      },
+      winbar = {
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = {},
+        lualine_x = {},
         lualine_y = {},
         lualine_z = {},
       },

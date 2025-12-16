@@ -1,8 +1,9 @@
 return {
-  'folke/tokyonight.nvim',
+  'slugbyte/lackluster.nvim',
   lazy = false,
   priority = 1000,
-  config = function()
-    vim.cmd [[colorscheme tokyonight-night]]
+  init = function()
+    -- vim.cmd.colorscheme("lackluster")
+    vim.cmd.colorscheme 'lackluster-hack'
   end,
 }
