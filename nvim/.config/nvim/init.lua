@@ -1,6 +1,11 @@
 require 'core.options'
 require 'core.snippets'
 
+  -- if on Windows or WSL, load clipboard support
+if vim.fn.has 'win32' == 1 or vim.fn.has 'wsl' == 1 then
+    require 'core.wclip'
+end
+
 -- Lazy.nvim plugin manager
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. 'lazy/lazy.nvim'
