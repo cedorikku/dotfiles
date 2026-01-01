@@ -1,9 +1,9 @@
 require 'core.options'
 require 'core.snippets'
 
-  -- if on Windows or WSL, load clipboard support
+-- if on Windows or WSL, load clipboard support
 if vim.fn.has 'win32' == 1 or vim.fn.has 'wsl' == 1 then
-    require 'core.wclip'
+  require 'core.wclip'
 end
 
 -- Lazy.nvim plugin manager
