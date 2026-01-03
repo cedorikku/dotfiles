@@ -1,4 +1,5 @@
 {
+  "format_on_save": "off",
   "terminal": {
     "font_family": "FiraCode Nerd Font Mono"
   },
