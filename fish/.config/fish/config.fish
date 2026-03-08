@@ -1,5 +1,7 @@
 fish_add_path $HOME/.local/bin
 
+set -U fish_greeting
+
 # Fish command history
 function history
     builtin history --show-time='%F %T '
