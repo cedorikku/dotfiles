@@ -1,2 +1,2 @@
-eval "$(oh-my-posh init zsh --config ~/min.omp.json)"
+eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"

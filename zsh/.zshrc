@@ -28,8 +28,6 @@ COMPLETION_WAITING_DOTS="true"
 # TODO: add more plugins that I use
 plugins=(git fzf extract nvm npm eza dotnet gh zsh-interactive-cd)
 
-source $ZSH/oh-my-zsh.sh
-
 # Ignore commands that start with spaces and duplicates.
 export HISTCONTROL=ignoreboth
 
