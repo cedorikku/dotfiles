@@ -200,6 +200,12 @@ return {
         prismals = {
           filetypes = { 'prisma' },
         },
+        basedpyright = {
+          analysis = {
+            autoSearchPaths = true,
+            diagnosticMode = 'openFilesOnly',
+          },
+        },
       }
 
       -- To check the current status of installed tools and/or manually install

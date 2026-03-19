@@ -23,6 +23,7 @@ return {
         'roslyn',    -- csharp lsp
         'rzls',      -- razor files
         'csharpier', -- csharp formatter
+        'black',     -- python formatter
       },
       automatic_installation = true,
     }
@@ -34,6 +35,7 @@ return {
       formatting.shfmt.with { args = { '-i', '4' } },
       formatting.csharpier,
       formatting.prisma_format,
+      formatting.black,
     }
 
     null_ls.setup {
