@@ -21,7 +21,6 @@ return {
         'shfmt',     -- Shell formatter
         'checkmake', -- linter for Makefiles
         'roslyn',    -- csharp lsp
-        'rzls',      -- razor files
         'csharpier', -- csharp formatter
         'black',     -- python formatter
       },
