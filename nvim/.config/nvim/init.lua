@@ -33,7 +33,7 @@ require('lazy').setup {
   require 'plugins.treesitter',
   require 'plugins.telescope',
   require 'plugins.autocompletion',
-  require 'plugins.none-ls',
+  require 'plugins.formatter',
   require 'plugins.gitsigns',
   require 'plugins.indent-blankline',
   require 'plugins.fold',

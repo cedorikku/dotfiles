@@ -157,10 +157,11 @@ return {
               ignore = { '*' },
             },
           },
-        }
+        },
       },
       ruff = {},
       roslyn_ls = {},
+      oxfmt = {},
     }
 
     local ensure_installed = vim.tbl_keys(servers or {})
