@@ -6,6 +6,20 @@ return {
     { 'nvim-treesitter/nvim-treesitter-textobjects', branch = 'main' },
   },
   config = function()
+    vim.api.nvim_create_autocmd('FileType', {
+      pattern = '*',
+      callback = function()
+        -- Enable treesitter highlighting
+        pcall(vim.treesitter.start)
+
+        -- Enable treesitter-based indentation
+        local excluded_ft = { 'cs' }
+        if not vim.tbl_contains(excluded_ft, vim.bo.filetype) then
+          vim.bo.indentexpr = "v:lua.require('nvim-treesitter').indentexpr()"
+        end
+      end,
+    })
+
     local parsers = {
       'html',
       'javascript',
@@ -25,23 +39,15 @@ return {
       'vimdoc',
       'c_sharp',
     }
+
     local alreadyInstalled = require('nvim-treesitter.config').get_installed()
     local parsersToInstall = vim
-        .iter(parsers)
-        :filter(function(parser)
-          return not vim.tbl_contains(alreadyInstalled, parser)
-        end)
-        :totable()
+      .iter(parsers)
+      :filter(function(parser)
+        return not vim.tbl_contains(alreadyInstalled, parser)
+      end)
+      :totable()
+
     require('nvim-treesitter').install(parsersToInstall)
-
-    vim.api.nvim_create_autocmd('FileType', {
-      callback = function()
-        -- Enable treesitter highlighting
-        pcall(vim.treesitter.start)
-
-        -- Enable treesitter-based indentation
-        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-      end,
-    })
   end,
 }
