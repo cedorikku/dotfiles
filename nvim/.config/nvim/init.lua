@@ -20,43 +20,26 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-if not vim.g.vscode then
-  require 'core.keymaps'
-  require('lazy').setup {
-    require 'plugins.lsp',
-    require 'plugins.lualine',
-    require 'plugins.colortheme',
-    require 'plugins.treesitter',
-    require 'plugins.telescope',
-    require 'plugins.autocompletion',
-    require 'plugins.none-ls',
-    require 'plugins.gitsigns',
-    require 'plugins.indent-blankline',
-    require 'plugins.fold',
-    require 'plugins.misc',
-    require 'plugins.auto-session',
-    require 'plugins.oil',
-    require 'plugins.roslyn',
-  }
-else
+if vim.g.vscode then
   require 'plugins.vscode'
-  require('lazy').setup {
-    require 'plugins.treesitter',
-    { 'ggandor/flit.nvim' },
-    { 'nvim-mini/mini.ai' },
-    { 'nvim-mini/mini.comment' },
-    { 'nvim-mini/mini.move' },
-    { 'nvim-mini/mini.pairs' },
-    {
-      'kylechui/nvim-surround',
-      version = '^3.0.0', -- Use for stability; omit to use `main` branch for the latest features
-      event = 'VeryLazy',
-      config = function()
-        require('nvim-surround').setup()
-      end,
-    },
-    { 'JoosepAlviste/nvim-ts-context-commentstring' },
-    { 'tpope/vim-repeat' },
-    { 'gbprod/yanky.nvim' },
-  }
+  return
 end
+
+require 'core.keymaps'
+require('lazy').setup {
+  require 'plugins.lsp',
+  require 'plugins.lualine',
+  require 'plugins.colortheme',
+  require 'plugins.treesitter',
+  require 'plugins.telescope',
+  require 'plugins.autocompletion',
+  require 'plugins.none-ls',
+  require 'plugins.gitsigns',
+  require 'plugins.indent-blankline',
+  require 'plugins.fold',
+  require 'plugins.auto-session',
+  require 'plugins.oil',
+  require 'plugins.roslyn',
+  require 'plugins.mini',
+  require 'plugins.misc',
+}

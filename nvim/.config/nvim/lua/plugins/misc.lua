@@ -1,9 +1,15 @@
 -- Standalone plugins with less than 10 lines of config go here
 return {
   {
-    -- Useful line commenting
-    'numToStr/Comment.nvim',
-    opts = {},
+    'tpope/vim-repeat',
+  },
+  {
+    'kylechui/nvim-surround',
+    version = '^4.0.0', -- Use for stability; omit to use `main` branch for the latest features
+    event = 'VeryLazy',
+    config = function()
+      require('nvim-surround').setup()
+    end,
   },
   {
     -- Tmux & split window navigation
@@ -47,13 +53,6 @@ return {
     event = 'VimEnter',
     dependencies = { 'nvim-lua/plenary.nvim' },
     opts = { signs = false },
-  },
-  {
-    -- High-performance color highlighter
-    'norcalli/nvim-colorizer.lua',
-    config = function()
-      require('colorizer').setup()
-    end,
   },
   {
     -- Easily surround text

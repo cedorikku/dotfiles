@@ -1,11 +1,19 @@
+require('lazy').setup {
+  {
+    'kylechui/nvim-surround',
+    version = '^4.0.0', -- Use for stability; omit to use `main` branch for the latest features
+    event = 'VeryLazy',
+    config = function()
+      require('nvim-surround').setup()
+    end,
+  },
+}
+
 local vscode = require 'vscode'
 local keymap = vim.keymap.set
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-
--- For conciseness
-local opts = { noremap = true, silent = true }
 
 -- Disable the spacebar key's default behavior in Normal and Visual modes
 keymap({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
@@ -71,7 +79,7 @@ end)
 keymap('n', '<leader>sg', function()
   vscode.action 'workbench.action.findInFiles'
 end)
-keymap('n', '<leader>sy', function() 
+keymap('n', '<leader>sy', function()
   vscode.action 'workbench.action.gotoSymbol'
 end)
 
