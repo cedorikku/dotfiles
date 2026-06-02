@@ -32,9 +32,6 @@ return {
 
       -- Useful status updates for LSP.
       { 'j-hui/fidget.nvim', opts = {} },
-
-      -- Allows extra capabilities provided by blink.cmp
-      'saghen/blink.cmp',
     },
     config = function()
       --  This function gets run when an LSP attaches to a particular buffer.
@@ -144,15 +141,12 @@ return {
         },
       }
 
-      -- Read more about what blink can do:
-      -- https://cmp.saghen.dev/#features
-      local capabilities = require('blink.cmp').get_lsp_capabilities()
-
       --  Add any additional override configuration in the following tables. Available keys are:
       --  - cmd (table): Override the default command used to start the server
       --  - filetypes (table): Override the default list of associated filetypes for the server
       --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
       --  - settings (table): Override the default settings passed when initializing the server.
+      ---@type table<string, vim.lsp.Config>
       local servers = {
         -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
         ts_ls = {},
@@ -162,21 +156,18 @@ return {
         dockerls = {},
         jsonls = {},
         yamlls = {},
-        emmet_language_server = {
-          filetypes = { 'html', 'css', 'jsx', 'tsx', 'javascriptreact', 'typescriptreact' },
-        },
+        emmet_language_server = {},
         lua_ls = {
           settings = {
             Lua = {
+              format = { enable = false },
               completion = {
                 callSnippet = 'Replace',
               },
             },
           },
         },
-        prismals = {
-          filetypes = { 'prisma' },
-        },
+        prismals = {},
         basedpyright = {
           analysis = {
             autoSearchPaths = true,
@@ -185,32 +176,13 @@ return {
         },
       }
 
-      -- To check the current status of installed tools and/or manually install
-      -- other tools, you can run
-      --    :Mason
-      --
-      -- `mason` had to be setup earlier: to configure its options see the
-      -- `dependencies` table for `nvim-lspconfig` above.
-      --
-      -- You can add other tools here that you want Mason to install
-      -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
-      require('mason-lspconfig').setup {
-        ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
-        automatic_installation = false,
-        handlers = {
-          function(server_name)
-            local server = servers[server_name] or {}
-            -- This handles overriding only values explicitly passed
-            -- by the server configuration above. Useful when disabling
-            -- certain features of an LSP (for example, turning off formatting for ts_ls)
-            server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-            require('lspconfig')[server_name].setup(server)
-          end,
-        },
-      }
+      for name, server in pairs(servers) do
+        vim.lsp.config(name, server)
+        vim.lsp.enable(name)
+      end
     end,
   },
 }
