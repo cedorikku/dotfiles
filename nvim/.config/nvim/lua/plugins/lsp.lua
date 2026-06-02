@@ -169,11 +169,18 @@ return {
         },
         prismals = {},
         basedpyright = {
-          analysis = {
-            autoSearchPaths = true,
-            diagnosticMode = 'openFilesOnly',
-          },
+          settings = {
+            basedpyright = {
+              disableOrganizeImports = true,
+            },
+            python = {
+              analysis = {
+                ignore = { '*' },
+              },
+            },
+          }
         },
+        ruff = {},
       }
 
       local ensure_installed = vim.tbl_keys(servers or {})

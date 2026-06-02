@@ -1,6 +1,3 @@
--- none-ls.nvim  documentation
--- https://github.com/nvimtools/none-ls.nvim/blob/main/doc/MAIN.md
-
 return {
   'nvimtools/none-ls.nvim',
   dependencies = {
@@ -22,7 +19,6 @@ return {
         'checkmake', -- linter for Makefiles
         'roslyn',    -- csharp lsp
         'csharpier', -- csharp formatter
-        'black',     -- python formatter
       },
       automatic_installation = true,
     }
@@ -34,11 +30,9 @@ return {
       formatting.shfmt.with { args = { '-i', '4' } },
       formatting.csharpier,
       formatting.prisma_format,
-      formatting.black,
     }
 
     null_ls.setup {
-      -- debug = true, -- Enable debug mode. Inspect logs with :NullLsLog.
       sources = sources,
       -- you can reuse a shared lspconfig on_attach callback here
       ---@param client vim.lsp.Client
