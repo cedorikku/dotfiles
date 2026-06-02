@@ -39,7 +39,6 @@ require('lazy').setup {
   require 'plugins.fold',
   require 'plugins.auto-session',
   require 'plugins.oil',
-  require 'plugins.roslyn',
   require 'plugins.mini',
   require 'plugins.misc',
 }

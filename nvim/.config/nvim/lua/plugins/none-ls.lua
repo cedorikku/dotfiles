@@ -17,7 +17,6 @@ return {
         'eslint_d',  -- ts/js linter
         'shfmt',     -- Shell formatter
         'checkmake', -- linter for Makefiles
-        'roslyn',    -- csharp lsp
         'csharpier', -- csharp formatter
       },
       automatic_installation = true,
