@@ -33,8 +33,6 @@ return {
           vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
         end
 
-        map('grn', vim.lsp.buf.rename, '[R]e[n]ame')
-        map('gra', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
         map('grr', require('telescope.builtin').lsp_references, '[G]oto [r]efe[r]ences')
         -- Jump to the implementation of the word under your cursor.
         --  Useful when your language has ways of declaring types without an actual implementation.
@@ -43,9 +41,6 @@ return {
         --  This is where a variable was first declared, or where a function is defined, etc.
         --  To jump back, press <C-t>.
         map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [d]efinition')
-        -- WARN: This is not Goto Definition, this is Goto Declaration.
-        --  For example, in C this would take you to the header.
-        map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
         -- Fuzzy find all the symbols in your current document.
         --  Symbols are things like variables, functions, types, etc.
         map('gO', require('telescope.builtin').lsp_document_symbols, 'Open Document Symbols')
