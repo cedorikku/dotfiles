@@ -37,13 +37,6 @@ return {
     'folke/which-key.nvim',
   },
   {
-    -- Autoclose parentheses, brackets, quotes, etc.
-    'windwp/nvim-autopairs',
-    event = 'InsertEnter',
-    config = true,
-    opts = {},
-  },
-  {
     -- Autoclose usual markup language tags (html, xml, etc)
     'windwp/nvim-ts-autotag',
   },
