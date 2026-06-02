@@ -2,10 +2,10 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- For conciseness
 local opts = { noremap = true, silent = true }
 
--- Disable the spacebar key's default behavior in Normal and Visual modes
+vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Refresh file
@@ -44,9 +44,6 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- Quickfix
 vim.keymap.set('n', '<M-n>', '<cmd>cnext<CR>', opts)
 vim.keymap.set('n', '<M-p>', '<cmd>cprev<CR>', opts)
-
--- Oil - a split explorer
-vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 -- Select all
 vim.keymap.set('n', '<C-a>', 'ggVG', opts)

@@ -47,7 +47,7 @@ return {
         if client:supports_method(vim.lsp.protocol.Methods.textDocument_formatting, bufnr) then
           -- Set personal formatting keymap
           vim.bo[bufnr].formatexpr = 'v:lua.vim.lsp.formatexpr()'
-          vim.keymap.set('n', '<leader>p', '<cmd>lua vim.lsp.buf.format({ async = false })<CR>',
+          vim.keymap.set('n', '<leader>f', '<cmd>lua vim.lsp.buf.format({ async = false })<CR>',
             { noremap = true, silent = true, desc = 'Format with lsp' })
         end
       end,
