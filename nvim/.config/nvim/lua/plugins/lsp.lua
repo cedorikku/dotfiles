@@ -123,49 +123,26 @@ return {
       },
     }
 
-    --  Add any additional override configuration in the following tables. Available keys are:
-    --  - cmd (table): Override the default command used to start the server
-    --  - filetypes (table): Override the default list of associated filetypes for the server
-    --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
-    --  - settings (table): Override the default settings passed when initializing the server.
-    ---@type table<string, vim.lsp.Config>
+    -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
     local servers = {
-      -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
-      ts_ls = {},
-      html = {},
-      cssls = {},
-      tailwindcss = {},
-      dockerls = {},
-      jsonls = {},
-      yamlls = {},
-      emmet_language_server = {},
-      lua_ls = {
-        settings = {
-          Lua = {
-            format = { enable = false },
-          },
-        },
-      },
-      prismals = {},
-      basedpyright = {
-        settings = {
-          basedpyright = {
-            disableOrganizeImports = true,
-            analysis = { ignore = { '*' } },
-          },
-        },
-      },
-      ruff = {},
-      roslyn_ls = {},
-      oxfmt = {},
+      'tsgo',
+      'html',
+      'cssls',
+      'tailwindcss',
+      'dockerls',
+      'jsonls',
+      'yamlls',
+      'emmet_language_server',
+      'lua_ls',
+      'prismals',
+      'basedpyright',
+      'ruff',
+      'roslyn_ls',
+      'oxfmt',
     }
 
-    local ensure_installed = vim.tbl_keys(servers or {})
-    require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+    require('mason-tool-installer').setup { ensure_installed = servers }
 
-    for name, server in pairs(servers) do
-      vim.lsp.config(name, server)
-      vim.lsp.enable(name)
-    end
+    vim.lsp.enable(servers)
   end,
 }
