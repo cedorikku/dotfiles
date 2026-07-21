@@ -26,7 +26,7 @@ return {
     --    an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
     --    function will be executed to configure the current buffer
     vim.api.nvim_create_autocmd('LspAttach', {
-      group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
+      group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),
       callback = function(event)
         local map = function(keys, func, desc, mode)
           mode = mode or 'n'
@@ -79,6 +79,12 @@ return {
               vim.api.nvim_clear_autocmds { group = 'kickstart-lsp-highlight', buffer = event2.buf }
             end,
           })
+        end
+
+        if client and client.name == 'markdown-oxide' then
+          vim.api.nvim_create_user_command('Daily', function(args)
+            client:exec_cmd { title = 'jump', command = 'jump', arguments = { args.args }, { bufnr = event.buf } }
+          end, { desc = 'Open daily note', nargs = '*' })
         end
 
         -- The following overrides the default hover handler to provide
@@ -139,9 +145,18 @@ return {
       'ruff',
       'roslyn_ls',
       'oxfmt',
+      'markdown-oxide',
     }
 
     require('mason-tool-installer').setup { ensure_installed = servers }
+
+    -- markdown-oxide needs a defined config
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
+    vim.lsp.config('markdown-oxide', {
+      cmd = { 'markdown-oxide' },
+      capabilities = capabilities,
+    })
 
     vim.lsp.enable(servers)
   end,
