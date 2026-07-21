@@ -4,6 +4,9 @@ vim.g.maplocalleader = ' '
 
 local opts = { noremap = true, silent = true }
 
+-- Consistency of c-bs behavior across different terminals
+vim.keymap.set('i', '<c-bs>', '<c-w>', opts)
+
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
