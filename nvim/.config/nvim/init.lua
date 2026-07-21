@@ -35,7 +35,6 @@ require('lazy').setup {
   require 'plugins.autocompletion',
   require 'plugins.formatter',
   require 'plugins.gitsigns',
-  require 'plugins.indent-blankline',
   require 'plugins.fold',
   require 'plugins.auto-session',
   require 'plugins.oil',
