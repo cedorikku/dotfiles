@@ -150,14 +150,6 @@ return {
 
     require('mason-tool-installer').setup { ensure_installed = servers }
 
-    -- markdown-oxide needs a defined config
-    local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
-    vim.lsp.config('markdown-oxide', {
-      cmd = { 'markdown-oxide' },
-      capabilities = capabilities,
-    })
-
     vim.lsp.enable(servers)
   end,
 }
