@@ -145,7 +145,7 @@ return {
       'ruff',
       'roslyn_ls',
       'oxfmt',
-      'markdown-oxide',
+      'markdown_oxide',
     }
 
     require('mason-tool-installer').setup { ensure_installed = servers }
