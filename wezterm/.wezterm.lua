@@ -5,7 +5,6 @@ local config = wezterm.config_builder()
 -- General
 config.max_fps = 120
 config.animation_fps = 60
-
 config.window_close_confirmation = "NeverPrompt"
 config.color_scheme = "Tokyo Night"
 config.hide_tab_bar_if_only_one_tab = true
@@ -112,6 +111,7 @@ wezterm.on("gui-startup", function(cmd)
 end)
 
 -- Tab Bar
+config.use_fancy_tab_bar = false
 config.window_frame = {
 	font_size = 10,
 }
