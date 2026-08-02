@@ -103,6 +103,20 @@ config.keys = {
 	},
 }
 
+---@param key integer
+local function switch_to_tab(key)
+	return {
+		key = tostring(key),
+		mods = "LEADER",
+		action = wezterm.action.ActivateTab(key - 1),
+	}
+end
+
+local max_tabs_my_left_pointing_finger_can_comfortably_reach = 5
+for i = 1, max_tabs_my_left_pointing_finger_can_comfortably_reach do
+	table.insert(config.keys, switch_to_tab(i))
+end
+
 -- Start maximized
 local mux = wezterm.mux
 wezterm.on("gui-startup", function(cmd)
