@@ -81,7 +81,7 @@ return {
           })
         end
 
-        if client and client.name == 'markdown-oxide' then
+        if client and client.name == 'markdown_oxide' then
           vim.api.nvim_create_user_command('Daily', function(args)
             client:exec_cmd { title = 'jump', command = 'jump', arguments = { args.args }, { bufnr = event.buf } }
           end, { desc = 'Open daily note', nargs = '*' })
