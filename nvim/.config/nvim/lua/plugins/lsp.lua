@@ -141,7 +141,7 @@ return {
       'emmet_language_server',
       'lua_ls',
       'prismals',
-      'basedpyright',
+      'pyrefly',
       'ruff',
       'roslyn_ls',
       'oxfmt',
