@@ -10,7 +10,6 @@ config.window_close_confirmation = "NeverPrompt"
 config.color_scheme = "Tokyo Night"
 config.hide_tab_bar_if_only_one_tab = true
 config.automatically_reload_config = true
-config.freetype_load_flags = "NO_HINTING"
 config.term = "xterm-256color"
 
 -- Font
