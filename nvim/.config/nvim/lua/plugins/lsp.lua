@@ -142,13 +142,16 @@ return {
       'lua_ls',
       'prismals',
       'pyrefly',
-      'ruff',
       'roslyn_ls',
-      'oxfmt',
       'markdown_oxide',
     }
 
-    require('mason-tool-installer').setup { ensure_installed = servers }
+    local formatters = {
+      'oxfmt',
+      'ruff',
+    }
+
+    require('mason-tool-installer').setup { ensure_installed = vim.tbl_extend('force', servers, formatters) }
 
     vim.lsp.enable(servers)
   end,
