@@ -1,6 +1,7 @@
 return {
   'nvim-treesitter/nvim-treesitter',
-  lazy = 'false',
+  lazy = false,
+  branch = 'main',
   build = ':TSUpdate',
   dependencies = {
     { 'nvim-treesitter/nvim-treesitter-textobjects', branch = 'main' },
@@ -40,14 +41,6 @@ return {
       'c_sharp',
     }
 
-    local alreadyInstalled = require('nvim-treesitter.config').get_installed()
-    local parsersToInstall = vim
-      .iter(parsers)
-      :filter(function(parser)
-        return not vim.tbl_contains(alreadyInstalled, parser)
-      end)
-      :totable()
-
-    require('nvim-treesitter').install(parsersToInstall)
+    require('nvim-treesitter').install(parsers)
   end,
 }
