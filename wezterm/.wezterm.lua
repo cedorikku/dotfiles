@@ -17,7 +17,7 @@ config.font = wezterm.font_with_fallback({
 	{ family = "FiraCode Nerd Font Propo", weight = "Medium" },
 	{ family = "Liga SFMono Nerd Font", weight = "Medium" },
 })
-config.line_height = 1.05
+config.line_height = 1.2
 
 -- Tmux like controls
 config.leader = { key = "a", mods = "ALT", timeout_milliseconds = 2000 }
