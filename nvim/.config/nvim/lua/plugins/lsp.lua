@@ -131,6 +131,7 @@ return {
 
     -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
     local servers = {
+      'clangd',
       'tsc',
       'html',
       'cssls',
@@ -147,6 +148,7 @@ return {
     }
 
     local formatters = {
+      'clang-format',
       'oxfmt',
       'ruff',
     }
