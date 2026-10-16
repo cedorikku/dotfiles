@@ -48,5 +48,8 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('n', '<M-n>', '<cmd>cnext<CR>', opts)
 vim.keymap.set('n', '<M-p>', '<cmd>cprev<CR>', opts)
 
--- Select all
-vim.keymap.set('n', '<C-a>', 'ggVG', opts)
+-- Tmux Resizing
+vim.keymap.set('n', '<M-H>', '<cmd>lua require("tmux").resize_left(step)<cr>', opts)
+vim.keymap.set('n', '<M-J>', '<cmd>lua require("tmux").resize_bottom(step)<cr>', opts)
+vim.keymap.set('n', '<M-K>', '<cmd>lua require("tmux").resize_top(step)<cr>', opts)
+vim.keymap.set('n', '<M-L>', '<cmd>lua require("tmux").resize_right(step)<cr>', opts)
