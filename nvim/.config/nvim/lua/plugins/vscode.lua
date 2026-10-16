@@ -23,7 +23,7 @@ keymap({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 ------------
 
 -- Formatting
-keymap('n', '<leader>p', function()
+keymap('n', '<leader>f', function()
   vscode.call 'editor.action.formatDocument'
   vscode.notify 'Code formatted'
 end)
