@@ -22,7 +22,6 @@ vim.o.splitbelow = true                              -- Force all horizontal spl
 vim.o.splitright = true                              -- Force all vertical splits to go to the right of current window (default: false)
 vim.o.hlsearch = false                               -- Set highlight on search (default: true)
 vim.o.showmode = false                               -- We don't need to see things like -- INSERT -- anymore (default: true)
-vim.opt.termguicolors = true                         -- Set termguicolors to enable highlight groups (default: false)
 vim.o.whichwrap = 'bs<>[]hl'                         -- Which "horizontal" keys are allowed to travel to prev/next line (default: 'b,s')
 vim.o.numberwidth = 4                                -- Set number column width to 2 (default: 4)
 vim.o.swapfile = false                               -- Creates a swapfile (default: true)
@@ -41,11 +40,13 @@ vim.o.writebackup = false                            -- If a file is being edite
 vim.o.undofile = true                                -- Save undo history (default: false)
 vim.o.completeopt =
 'menuone,noselect'                                   -- Set completeopt to have a better completion experience (default: 'menu,preview')
+
+vim.opt.termguicolors = true                         -- Set termguicolors to enable highlight groups (default: false)
 vim.opt.shortmess:append 'c'                         -- Don't give |ins-completion-menu| messages (default: does not include 'c')
 vim.opt.formatoptions:remove { 'c', 'r', 'o' }       -- Don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode. (default: 'croql')
 vim.opt.runtimepath:remove '/usr/share/vim/vimfiles' -- Separate Vim plugins from Neovim in case Vim still in use (default: includes this path if Vim is installed)
-
 vim.opt.autoread = true                              -- Automatically checks if the file has been changed externally
+vim.opt.guicursor = 'n-v-i-c:block-Cursor'           -- Change cursor appearance in different modes 
 
 vim.o.winborder = 'rounded'
 
