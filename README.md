@@ -26,6 +26,16 @@ Important stuff, like nerd font, to make stuff work nicely especially in neovim
 pacman -S vim nvim tree-sitter-cli eza zoxide fzf rg fd ripgrep ttf-firacode-nerd trash-cli starship wezterm
 ```
 
+#### [fnm](https://github.com/Schniz/fnm) (for managing npm versions that'll be useful for some lsp servers and stuff)
+
+install desired version of node, e.g. `lts`
+
+```
+fnm install --lts
+fnm use <version>
+fnm default <version>
+```
+
 ## Installation
 
 > [!NOTE]: Make sure to setup your .gitconfig first
