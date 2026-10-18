@@ -40,4 +40,5 @@ require('lazy').setup {
   require 'plugins.oil',
   require 'plugins.mini',
   require 'plugins.misc',
+  require 'plugins.markdown',
 }
